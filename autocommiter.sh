@@ -28,5 +28,3 @@ else
         echo "Do nothing"
     fi
 fi
-
-# * * * * * /usr/bin/bash /home/mdandre/projects/bash/autocommitter.sh
