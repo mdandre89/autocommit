@@ -18,7 +18,7 @@ everything being pulled automatically. Below is the ordered list of steps you mu
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) or [add remotely](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories) to pull the new repository locally in your machine.
 2. Add the full path to the repo you want to commit the files and save it as `TARGETFOLDER='repo/to/be/auto/committed'` inside your .bashrc(or .zshrc) files.
-4. Type `crontab -e` and add this line `* * * * * /usr/bin/bash /folder/of/this/repo`, it will run evry minute, you can customize the frequency [here](https://crontab.guru).
+4. Type `crontab -e` and add this line `* * * * * /usr/bin/bash /folder/of/this/repo/autocommiter.sh`, it will run every minute, you can customize the frequency [here](https://crontab.guru).
 5. Run `service cron status` to check if cron is active, if not `service cron start` to start it.
 6. The script is now running a log is kept in `/autocommiter_tracker`.
 
