@@ -13,8 +13,7 @@ To use this program you need:
 
 ### All-in-one method
 
-To use this program you just need an initial configuration. After that, you just have to sit down and watch
-everything being pulled automatically. Below is the ordered list of steps you must follow to get all working:
+To use this program you just need an initial configuration.  Below is the ordered list of steps you must follow to get all working:
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) or [add remotely](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories) to pull the new repository locally in your machine.
 2. Run `sudo nano /etc/environment` and save these 2 fullpaths `TARGETFOLDER="/home/folders/myprojectsfolder/target"` and `AUTOCOMMITFOLDER="/home/folders/myprojectsfolder/autocommit"`
