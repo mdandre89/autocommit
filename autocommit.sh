@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 saved_date=$(tail -n 1 ${AUTOCOMMITFOLDER}/autocommit_tracker | grep -Eo '(?<|)[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}')
 saved_date_timestamp=$(date -d "${saved_date}" +"%s")
 

@@ -18,10 +18,10 @@ everything being pulled automatically. Below is the ordered list of steps you mu
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) or [add remotely](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories) to pull the new repository locally in your machine.
 2. Run `sudo nano /etc/environment` and save these 2 fullpaths `TARGETFOLDER="/home/folders/myprojectsfolder/target"` and `AUTOCOMMITFOLDER="/home/folders/myprojectsfolder/autocommit"`
-3. Once inside this repo run `chmod +x ./autocommit.sh` to make sure it is an executable and it can be used by a cron.
+3. Once inside this repo run `chmod +x ./autocommit.sh` to make sure it is an executable and it can be used by cron.
 4. Type `crontab -e` and add this line `* * * * * /home/myprojectsfolder/autocommit/autocommit.sh >> /var/log/cron.log 2>&1`, it will run every minute, you can customize the frequency [here](https://crontab.guru).
 5. Run `service cron status` to check if cron is active, if not `service cron start` to start it.
-6. The script is now running a log is kept in `./autocommit_tracker`.
+6. The script is now running a log of the commits saved each day is kept in `./autocommit_tracker`.
 
 NB
 If your cron has never been configured make sure there are right permissions in place.
