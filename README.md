@@ -1,6 +1,6 @@
 # Git Autocommit
 
-This program allows you to connect automatically push code to github repo of your choice
+This script allows you to automatically push code to a github repo of your choice
 
 ## Usage
 
