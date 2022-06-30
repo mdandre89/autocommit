@@ -1,5 +1,15 @@
 #!/bin/bash
 COMMITS=3
+TARGETFOLDER="$1"
+AUTOCOMMITFOLDER=$(dirname "$0")
+
+if [ -z "$TARGETFOLDER" ]
+then
+    echo "Please specify a folder to autocommit"
+    exit 1
+else
+    echo "Target folder is $TARGETFOLDER"
+fi
 
 saved_date=$(tail -n 1 ${AUTOCOMMITFOLDER}/autocommit_tracker | grep -Eo '(?<|)[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}')
 saved_date_timestamp=$(date -d "${saved_date}" +"%s")
@@ -13,8 +23,9 @@ then
 else
     today_simplified=$(date +"%Y-%m-%d")
     today_timestamp=$(date -d "${today_simplified}" +"%s")
+    current_time=$(date +%H:%M)
 
-    if [[ $(date +"%u") -lt 6 ]] && ([ -z "$saved_date" ] || [ $today_timestamp -gt $saved_date_timestamp ]) ; then
+    if [[ $(date +"%u") -lt 6 ]] && ([ -z "$saved_date" ] || [ $today_timestamp -gt $saved_date_timestamp ]) && ([[ "$current_time" < "23:00" ]] && [[ "$current_time" > "09:30" ]]); then
         arr=($(echo $choosen | tr ',' "\n"))
         for (( i=0; i<${#arr[@]}; i++ ))
         do
