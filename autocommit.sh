@@ -1,5 +1,5 @@
 #!/bin/bash
-COMMITS=3
+COMMITS=$(($RANDOM%3 + 4))
 TARGETFOLDER="$1"
 AUTOCOMMITFOLDER=$(dirname "$0")
 
@@ -41,6 +41,6 @@ else
         echo "$choosen | $today_simplified" >> autocommit_tracker
     else
         cd $AUTOCOMMITFOLDER
-        echo "Do nothing"
+        echo "Do nothing $current_time"
     fi
 fi
