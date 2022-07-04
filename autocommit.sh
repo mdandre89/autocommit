@@ -1,5 +1,5 @@
 #!/bin/bash
-COMMITS=$(($RANDOM%3 + 4))
+COMMITS=$(($RANDOM%4 + 1))
 TARGETFOLDER="$1"
 AUTOCOMMITFOLDER=$(dirname "$0")
 
